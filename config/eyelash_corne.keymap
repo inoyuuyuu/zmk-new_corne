@@ -22,7 +22,7 @@
  */
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100    // 100
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 20
 
 / {
     behaviors {
@@ -31,14 +31,6 @@
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
-        };
-
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-            tap-ms = <20>;
         };
     };
 
@@ -92,7 +84,7 @@
                                     &trans     &trans     &kp SPACE                                                             &kp RET    &trans     &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         layer_3 {
@@ -104,7 +96,7 @@
                                        &trans       &trans     &trans                                                                   &trans       &trans     &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&scroll_encoder>;
         };
     };
 };
