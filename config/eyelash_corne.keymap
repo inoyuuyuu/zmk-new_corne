@@ -23,6 +23,7 @@
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
+#define ZMK_MOUSE_POINTING_SCRL_VAL 100    // 追加
 
 / {
     behaviors {
@@ -32,6 +33,12 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+             compatible = "zmk,behavior-sensor-rotate";
+             #sensor-binding-cells = <0>;
+             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+             tap-ms = <20>;
+         };
     };
 
     rgb_encoder: rgb_encoder {
@@ -84,7 +91,7 @@
                                     &trans     &trans     &kp SPACE                                                             &kp RET    &trans     &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         layer_3 {
