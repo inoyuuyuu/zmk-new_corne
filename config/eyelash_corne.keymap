@@ -22,7 +22,7 @@
  */
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // 20
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 20
 
 / {
     behaviors {
@@ -96,7 +96,7 @@
                                        &trans       &trans     &trans                                                                   &trans       &trans     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&scroll_encoder>;
         };
     };
 };
