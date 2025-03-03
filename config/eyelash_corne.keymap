@@ -32,6 +32,11 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+        mouse_click: mouse_button_kp {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&mkp MB2>, <&mkp MB1>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -48,11 +53,7 @@
         tap-ms = <30>;
     };
 
-    mouse_click: mouse_button_kp {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&mkp MB2>, <&mkp MB1>;
-    };
+
 
     keymap {
         compatible = "zmk,keymap";
