@@ -51,7 +51,7 @@
     mouse_click: mouse_button_kp {
         compatible = "zmk,behavior-sensor-rotate-var";
         #sensor-binding-cells = <0>;
-        bindings = <&mkp>, <&mkp>;
+        bindings = <&mkp MB2>, <&mkp MB1>;
     };
 
     keymap {
@@ -78,7 +78,7 @@
                                          &trans        &trans        &trans                                                                          &kp INS          &kp DEL          &trans
             >;
 
-            sensor-bindings = <&mouse_click MB2 MB1>;
+            sensor-bindings = <&mouse_click>;
         };
 
         raise_layer {
