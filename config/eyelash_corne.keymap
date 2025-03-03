@@ -103,7 +103,7 @@
                                        &trans       &trans     &trans                                                                   &trans       &trans     &trans
             >;
 
-            sensor-bindings = <&mouse_click MB4 MB5>;
+            sensor-bindings = <&mouse_click>;
         };
     };
 };
