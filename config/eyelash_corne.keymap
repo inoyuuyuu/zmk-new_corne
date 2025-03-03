@@ -83,7 +83,7 @@
                                     &trans        &trans          &kp SPACE                                                             &kp RET    &trans     &trans
             >;
 
-            sensor-bindings = <&scroll_encoder SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         layer_3 {
